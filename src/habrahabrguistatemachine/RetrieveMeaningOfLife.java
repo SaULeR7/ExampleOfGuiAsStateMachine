@@ -7,7 +7,7 @@ package habrahabrguistatemachine;
 import javax.swing.SwingWorker;
 
 /**
- *
+ * worker that will retrieve answer to the main question using passed Answerer
  * @author __nocach
  */
 public class RetrieveMeaningOfLife extends SwingWorker<Integer, Integer>{

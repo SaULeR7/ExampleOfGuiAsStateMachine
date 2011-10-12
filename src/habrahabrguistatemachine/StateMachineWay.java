@@ -14,6 +14,9 @@ import javax.swing.SwingWorker.StateValue;
 
 public class StateMachineWay extends javax.swing.JFrame {
 	private Logger logger = Logger.getLogger(StandardWay.class.getName());
+	/**
+	 * controlls switching between gui states
+	 */
 	private GuiStateManager stateManager = new GuiStateManager();
 	private class PreparingAnswererState extends BaseGuiState{
 		@Override

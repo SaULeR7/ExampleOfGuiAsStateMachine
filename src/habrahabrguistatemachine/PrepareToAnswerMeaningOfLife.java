@@ -7,7 +7,7 @@ package habrahabrguistatemachine;
 import javax.swing.SwingWorker;
 
 /**
- *
+ * worker that prepares MeaningOfLifeAnswerer
  * @author __nocach
  */
 public class PrepareToAnswerMeaningOfLife extends SwingWorker<MeaningOfLifeAnswerer, Void>{
@@ -16,5 +16,4 @@ public class PrepareToAnswerMeaningOfLife extends SwingWorker<MeaningOfLifeAnswe
         Thread.sleep(1500);
         return new MeaningOfLifeAnswerer();
     }
-    
 }

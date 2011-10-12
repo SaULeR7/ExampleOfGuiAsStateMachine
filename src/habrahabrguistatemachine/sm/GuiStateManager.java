@@ -10,6 +10,10 @@ package habrahabrguistatemachine.sm;
  */
 public class GuiStateManager {
     private GuiState currentState = new EmptyState();
+    /**
+     * makes passed state current
+     * @param newState not null new state
+     */
     public synchronized void switchTo(GuiState newState){
         if (newState == null){
             throw new NullPointerException();

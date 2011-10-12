@@ -5,7 +5,7 @@
 package habrahabrguistatemachine.sm;
 
 /**
- *
+ * states that does nothing
  * @author __nocach
  */
 public class EmptyState implements GuiState{
