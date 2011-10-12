@@ -41,6 +41,11 @@ public class StandardWay extends javax.swing.JFrame {
                         progressBar.setValue((Integer)evt.getNewValue());
                     }
                     if ("state".equals(evt.getPropertyName())){
+                    	if (StateValue.STARTED.equals(evt.getNewValue())){
+                    		doButton.setText("In Search");
+                            doButton.setEnabled(false);
+                            labelStatus.setText("searching...");
+                    	}
                         if (StateValue.DONE.equals(evt.getNewValue())){
                             RetrieveMeaningOfLife worker = (RetrieveMeaningOfLife)evt.getSource();
                             try{
@@ -54,6 +59,7 @@ public class StandardWay extends javax.swing.JFrame {
                             }
                             labelStatus.setText("answer was found");
                             doButton.setText("Find again");
+                            doButton.setEnabled(true);
                         }
                     }
                 }

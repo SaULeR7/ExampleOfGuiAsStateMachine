@@ -74,6 +74,11 @@ public class StateMachineWay extends javax.swing.JFrame {
             doButton.setEnabled(false);
 		}
 	}
+	/**
+	 * actions that starts worker that will find the answer to the main question
+	 * @author __nocach
+	 *
+	 */
     private class FindAnswerAction extends AbstractAction{
         private final MeaningOfLifeAnswerer answerer;
         public FindAnswerAction(MeaningOfLifeAnswerer answerer){
