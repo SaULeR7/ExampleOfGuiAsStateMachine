@@ -8,7 +8,7 @@ package habrahabrguistatemachine;
  * class that can answer to the maing question
  * @author __nocach
  */
-public class MeaningOfLifeAnswerer {
+public class MeaningOfLifeAnswerer{ 
     public int answer(){
         return 42;
     }

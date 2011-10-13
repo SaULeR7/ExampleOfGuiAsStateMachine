@@ -42,6 +42,7 @@ public class StandardWay extends javax.swing.JFrame {
                     }
                     if ("state".equals(evt.getPropertyName())){
                     	if (StateValue.STARTED.equals(evt.getNewValue())){
+                    		//состояние начался поиск ответа
                     		doButton.setText("In Search");
                             doButton.setEnabled(false);
                             labelStatus.setText("searching...");
@@ -50,10 +51,12 @@ public class StandardWay extends javax.swing.JFrame {
                             RetrieveMeaningOfLife worker = (RetrieveMeaningOfLife)evt.getSource();
                             try{
                                 Integer answer = worker.get();
+                                //состояние ответ получен
                                 logger.info("got the answer");
                                 JOptionPane.showMessageDialog(rootPane, "THE ANSWER IS " + answer);
                             }
                             catch(Exception ex){
+                            	//состояние ошибка при получении ответа
                             	logger.info("error while retrieving the answer");
                                 JOptionPane.showMessageDialog(rootPane, "Error while searching for meaning of life");
                             }
@@ -77,11 +80,13 @@ public class StandardWay extends javax.swing.JFrame {
          public void propertyChange(PropertyChangeEvent evt) {
              if ("state".equals(evt.getPropertyName())){
                  if (StateValue.STARTED.equals(evt.getNewValue())){
+                	 //здесь мы логически в состоянии инициализации MeaningOfLifeAnswerer
                      labelStatus.setText("Prepearing... ");
                      doButton.setEnabled(false);
                      logger.info("preparing...");
                  }
                  if (StateValue.DONE.equals(evt.getNewValue())){
+                	//здесь мы логически в состоянии готовности запустить поиск ответа на вопрос
                      labelStatus.setText("I am prepared to answer the meaning of life");
                      doButton.setEnabled(true);
                      PrepareToAnswerMeaningOfLife worker = (PrepareToAnswerMeaningOfLife)evt.getSource();
@@ -90,6 +95,7 @@ public class StandardWay extends javax.swing.JFrame {
                          logger.info("prepared");
                      }
                      catch(Exception ex){
+                    	//состояние ошибки при инициализации MeaningOfLifeAnswerer
                          JOptionPane.showMessageDialog(rootPane, "failed to find answerer to the question");
                          dispose();
                          logger.severe("failed to prepare");
