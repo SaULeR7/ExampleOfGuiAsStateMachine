@@ -10,6 +10,8 @@
  */
 package habrahabrguistatemachine;
 
+import habrahabrguistatemachine.domain.MeaningOfLifeAnswerer;
+
 import java.awt.event.ActionEvent;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;

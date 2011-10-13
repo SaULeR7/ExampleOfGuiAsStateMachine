@@ -1,5 +1,6 @@
 package habrahabrguistatemachine;
 
+import habrahabrguistatemachine.domain.MeaningOfLifeAnswerer;
 import habrahabrguistatemachine.sm.BaseGuiState;
 import habrahabrguistatemachine.sm.GuiStateManager;
 

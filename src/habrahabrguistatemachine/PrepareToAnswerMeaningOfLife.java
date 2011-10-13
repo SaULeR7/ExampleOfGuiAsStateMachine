@@ -4,6 +4,8 @@
  */
 package habrahabrguistatemachine;
 
+import habrahabrguistatemachine.domain.MeaningOfLifeAnswerer;
+
 import javax.swing.SwingWorker;
 
 /**
